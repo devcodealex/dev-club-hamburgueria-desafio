@@ -1,8 +1,27 @@
-# dev-club-hamburgueria-desafio
-O desafio da hamburgueria consiste em criar as rotas para um sistema de registro de pedidos dos clientes, utilizando a linguagem Node.js com o auxílio do framework Express.
+# Dev Club Hamburgueria - Desafio
 
-Nesse sistema, o cliente pode fazer um pedido informando a sua ordem (itens que deseja), o seu nome e o preço total do pedido. É possível, também, editar a ordem do pedido caso o cliente mude de ideia antes que a produção do pedido seja iniciada.
+Este projeto é uma API em Node.js para gerenciar pedidos de uma hamburgueria. Ele permite que os clientes façam pedidos, consultem o status de seus pedidos e atualizem ou excluam seus pedidos, e que a equipe da hamburgueria gerencie todos os pedidos.
 
-Quando o pedido é registrado, ele é armazenado com o status "Aguardando produção". Após a produção do pedido, o status é atualizado para "Pronto" e aguarda a entrega. Quando a entrega é feita, o pedido é deletado do sistema.
+## Tecnologias utilizadas
+- Node.js
+- Express
+- UUID
 
-Em resumo, o sistema da hamburgueria permite que os clientes registrem pedidos, façam edições e acompanhem o status do pedido até que ele seja entregue. É uma solução simples e eficiente para gerenciar as operações de uma hamburgueria.
+## Como executar o projeto
+1. Clone o repositório para sua máquina local
+2. Instale as dependências do projeto com o comando `npm install`
+3. Execute o projeto com o comando `npm start`
+
+## Como utilizar a API
+### Endpoints
+A API possui os seguintes endpoints:
+
+- `GET /order`: Retorna uma lista de todos os pedidos.
+- `POST /order`: Cria um novo pedido com as informações de ordem, nome do cliente e preço. O status é definido como "Em preparação".
+- `GET /order/:id`: Retorna um pedido específico pelo ID.
+- `PUT /order/:id`: Atualiza as informações de um pedido específico pelo ID.
+- `PATCH /order/:id`: Atualiza o status de um pedido para "pronto".
+- `DELETE /order/:id`: Exclui um pedido específico pelo ID.
+## Considerações finais
+
+Este projeto foi criado como parte de um desafio proposto pelo Dev Club. Ele foi desenvolvido com o objetivo de fornecer uma solução simples e funcional para gerenciamento de pedidos de uma hamburgueria. Espero que seja útil para quem precisar de uma API semelhante.
